@@ -134,7 +134,7 @@ export default function Home() {
                onChange={(e)=>{setPassword(e.target.value)}}
             />
             <Button onClick={onLogin}>
-               Login!!
+               Login
             </Button>
          </div>
       </div>
