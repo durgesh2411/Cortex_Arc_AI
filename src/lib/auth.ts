@@ -4,6 +4,7 @@ import { db } from "@/db"; // your drizzle instance
 import * as schema from "@/db/schema"; // Import the schema
 
 export const auth = betterAuth({
+   trustedOrigins: ["http://localhost:3000"],
 
    socialProviders: {
         github: {
