@@ -7,11 +7,10 @@ import { useQuery } from "@tanstack/react-query";
 
 
 export const HomeView = ()=>{
-   const trpc  = useTRPC()
-   const { data } = useQuery(trpc.hello.queryOptions({text: "Durgesh"}))
+
    return (
-      <div className="flex flex-col p-4 gap-y-4">
-         {data?.greeting}
+      <div >
+         home view
       </div>
    )
 }
