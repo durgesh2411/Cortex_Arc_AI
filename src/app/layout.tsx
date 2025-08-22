@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import  { TRPCReactProvider } from "@/trpc/client";
 import "./globals.css";
 
 // const geistSans = Geist({
@@ -22,13 +23,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.className} antialiased`}
-        suppressHydrationWarning
-      >
-        {children}
-      </body>
-    </html>
+      <TRPCReactProvider>
+         <html lang="en" suppressHydrationWarning>
+            <body
+               className={`${inter.className} antialiased`}
+               suppressHydrationWarning
+               >
+               {children}
+            </body>
+         </html>
+      </TRPCReactProvider>
   );
 }
